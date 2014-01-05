@@ -1,0 +1,18 @@
+From userid@host.domain.com Sun Apr  2 12:52:33 2000 -0400
+X-POP3-Rcpt: foobar@somewhere
+Received: from host.domain.com ([195.114.252.4]:1163 "EHLO
+        host.domain.com") by hidden.com with ESMTP
+	id <S557342AbQDBQw1>; Sun, 2 Apr 2000 18:52:27 +0200
+Received: (from userid@localhost)
+	by host.domain.com (8.9.3/8.9.3) id SAA00944
+	for userid@domain.com; Sun, 2 Apr 2000 18:52:33 +0200
+Date:   Sun, 2 Apr 2000 18:52:33 +0200
+From:   userid@host.domain.com
+Message-Id: <200004021652.SAA00944@host.domain.com>
+To:     userid@domain.com
+Subject: TEST
+Return-Path: <userid@host.domain.com>
+X-Orcpt: rfc822;userid@domain.com
+
+This is just a test message
+

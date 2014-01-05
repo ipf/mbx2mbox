@@ -1,0 +1,263 @@
+#!/usr/bin/perl
+
+$VERSION = 0.34;
+
+use strict;
+use Date::Manip;
+
+use Getopt::Std;
+use vars qw(%opts);
+
+BEGIN
+{
+  getopt("",\%opts);
+}
+
+use constant DEBUG => $opts{d} || 0;
+
+# ------------------------------------------------------------------------------
+
+sub dprint
+{
+  return unless DEBUG;
+
+  my $message = join '',@_;
+
+  my @lines = split /\n/, $message;
+  foreach my $line (@lines)
+  {
+    print "DEBUG: $line\n";
+  }
+
+  return 1;
+}
+
+# ------------------------------------------------------------------------------
+
+my @mailboxes = @ARGV;
+
+#my $start_headers = "(From|X-POP3-Rcpt|Received|Sender|Return-Path|Date)";
+my $start_headers = '([\w-]{4,})';
+
+Date_Init("TZ=EDT");
+
+if ($#mailboxes == -1)
+{
+  # Remove ./ from name
+  $0 =~ s/^\.\///;
+
+  print "Usage: $0 [-d] file1.mbx file2.dbx ...\n";
+  exit(0);
+}
+
+foreach my $mailbox (@mailboxes)
+{
+  dprint "Now processing $mailbox\n";
+
+  if ($mailbox !~ /\.[dm]bx$/i)
+  {
+    print STDERR "ERROR: $mailbox is not a .mbx or .dbx file.\n";
+    next;
+  }
+
+  my $outfile = $mailbox;
+  $outfile =~ s/\.[md]bx$//i;
+
+  open INFILE, $mailbox;
+  open OUTFILE, ">$outfile";
+
+  # Remember, \XXX notation is octal, not decimal!
+
+  my $header = '';
+  my $body = '';
+
+  # This is the main loop. It's executed once for each email
+  while (!eof(INFILE))
+  {
+    # There are potentially several null char's between messages, so this will
+    # keep eating input until we find something that contains a header.
+    while (!eof(INFILE) && $header !~ /\000$start_headers:/s)
+    {
+      $header .= <INFILE>;
+    }
+
+    if ($header =~ /\000$start_headers:/s)
+    {
+      $header =~ s/^.*?\000($start_headers:)/$1/s;
+    }
+    else
+    {
+      last;
+    }
+
+
+    # Finish reading the header
+    while (!eof(INFILE) && $header !~ /\n\n/s)
+    {
+      $header .= <INFILE>;
+      $header =~ s/\r//g;
+    }
+
+    ($header,$body) = $header =~ /^(.*?\n\n)(.*)$/s;
+
+    # Clean up junk in front of first header
+    $header =~ s/^.*?($start_headers:)/$1/s;
+
+    PrintDebug($header);
+
+    print OUTFILE ComputeSeparator($header),"\n$header";
+
+    # Now process each line of the body. Store the next email's header if we
+    # hit it.
+
+    my $last_printed = '';
+    $header = '';
+    while (!eof(INFILE) && $header eq '')
+    {
+      $body = <INFILE> if $body eq '';
+
+      if ($body =~ /\000$start_headers:/)
+      {
+        # We want to keep the null so that the header will match again later
+        # after the body of the current email is done processing.
+        ($body,$header) = $body =~ /^(.*?)(\000$start_headers:.*)/s;
+      }
+
+      # Remove any weird characters that remain in the middle of the text.
+      $body =~ s/[\000-\010\013\015\016-\037\204-\224]//sg;
+      $body =~ s/([\000-\010\013\015\016-\037\177-\377].{0,3})*$//sg;
+      $body =~ s/[\177-\377]//g if $opts{c};
+
+      print OUTFILE $body;
+      $last_printed = $body if $body ne '';
+
+      # Put at least one empty line between emails (except for the last one).
+      if ($header ne '')
+      {
+        print OUTFILE "\n\n" if $last_printed !~ /\n$/s;
+        print OUTFILE "\n" if $last_printed =~ /[^\n]\n$/s;
+      }
+
+      $body = '';
+    }
+  }
+
+  close INFILE;
+  close OUTFILE;
+}
+
+#-------------------------------------------------------------------------------
+
+sub FixHeader($)
+{
+  my $email = shift;
+
+
+  return $email;
+}
+
+#-------------------------------------------------------------------------------
+
+sub ComputeSeparator($)
+{
+  my $email = shift;
+
+  # pull out the stuff that goes into the message separator.
+  my ($from) = $email =~ /From: *(.*)\n/im;
+
+  if ($from =~ /<(.*)>/)
+  {
+    $from = $1;
+  }
+  elsif ($from =~ /(.*) \(.*\)*/)
+  {
+    $from = $1;
+  }
+
+  $email =~ /Date: (.*)\n/im;
+
+  my $tempDate = ParseDate($1);
+  my $date = UnixDate($tempDate,"%a %b %e %H:%M:%S %Y %z");
+
+  return "From $from $date";
+}
+
+#-------------------------------------------------------------------------------
+
+sub PrintDebug($)
+{
+  my $email = shift;
+
+  return unless DEBUG;
+
+  my ($from) = $email =~ /From: *(.*)\n/im;
+  my ($date) = $email =~ /Date: *(.*)\n/im;
+  my ($subj) = $email =~ /Subject: *(.*)\n/im;
+
+  dprint '-'x70;
+  dprint "Processed email:";
+  dprint "  $from";
+  dprint "  $date";
+  dprint "  $subj";
+}
+
+#-------------------------------------------------------------------------------
+
+=head1 NAME
+
+mbx2mbox - Converts Outlook .mbx and .dbx files into standard RFC822 mail
+files.
+
+=head1 SYNOPSIS
+
+  mbx2mbox [-dc] <files ending in .mbx or .dbx>
+
+=head1 DESCRIPTION
+
+=over 2
+
+I<mbx2mbox> attempts to convert Microsoft's proprietary .mbx and .dbx formats
+to the standard RFC822 mail format used by programs like Pine, Eudora, and
+Netscape.  The .mbx and .dbx files provided as arguments to mbx2mbox are
+processed and output to files having the same name, except without the .mbx
+extension.
+
+Mailboxes from newer versions of Outlook and Outlook express may not be
+supported.  Be sure to compress your mailbox using Outlook, which should help
+remove some of the binary data from the file. Also be aware that this script
+has not been tested for Outlook versions since circa 1997, and may not work.
+
+For a survey of alternative methods of converting Outlook mailboxes, visit the
+mbx2mbox homepage at http://mbx2mbox.sourceforge.net/.
+
+=back
+
+=head1 OPTIONS AND ARGUMENTS
+
+=item B<-c>
+
+Causes mbx2mbox to more agressively remove binary-like characters. (This will
+remove characters that are part of the foreign language character set.)
+
+=item B<-d>
+
+Debug mode.
+
+=head1 EXAMPLES
+
+Process saved.mbx and sent.dbx, creating the standard mail files "saved" and
+"sent".
+
+  mbx2mbox saved.mbx sent.dbx
+
+=head1 AUTHOR
+
+  David Coppit, <david@coppit.org>, http://coppit.org/
+
+=head1 SEE ALSO
+
+elm(1), mail(1), grep(1), perl(1), printmail(1), Mail::Internet(3)
+Crocker,  D.  H., Standard for the
+Format of Arpa Internet Text Messages, RFC822.
+
+=cut

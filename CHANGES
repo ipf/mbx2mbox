@@ -1,0 +1,47 @@
+New in Version 0.34:
+- The constructed "From " line now assumes EDT instead of the machine's
+  timezone. This makes the test cases pass in timezones other than EDT.
+- Generalized search for start of new email to a NULL character followed by
+  three or more word characters or hyphens, followed by a colon. This improves
+  dbx processing quite a bit.
+- Fixed a potential infinite loop in mailbox reading.
+
+New in Version 0.33:
+- Restructured code.
+- The date on the "From" line is now correctly built from the "From:" line.
+  (Thanks to Maik Nijhuis <mnijhuis@multiweb.nl> for finding the bug.)
+- mbx2mbox now uses Date::Manip to construct the date for the "From" line.
+- Added tests
+- Project moved to SourceForge (http://mbx2mbox@sourceforge.net/).
+
+New in version 0.32:
+- Improved parsing of emails (David Hall <davidahall@compuserve.com>)
+- Header "From someone@somewhere.com" now uses sender's email address.
+  (David Hall <davidahall@compuserve.com>)
+- Quoted headers are no longer mistakenly processed.
+  (David Hall <davidahall@compuserve.com>)
+
+New in version 0.31:
+- Linefeeds cleaned up. (By Twinkles <twinkles@one.net.au>)
+
+New in version 0.3:
+- Improved parsing of emails at the expense of speed for mailboxes with large
+  attachments. 
+- Added -c flag for more aggressive removal of odd characters in email bodies.
+  (Weakened default removal for more friendly handling of non-English
+  characters.) Thanks to Joerg Hau <joerg.hau@dplanet.ch>
+- Added debugging mode (-d)
+
+New in version 0.2:
+- Added .dbx support.
+
+New in version 0.11:
+- Added "Received" to header list. (Thanks to T.R. Fullhart <kayos@kayos.org>)
+- Added POD documentation
+
+New in version 0.1:
+- Fixed extra newline and dropped From: on first email.
+- Renamed to mbx2mbox from mbox2mail
+
+New in version 0.0:
+- Initial version.

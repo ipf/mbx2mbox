@@ -1,0 +1,20 @@
+mbx2mbox                              Program file
+README                                Read this first
+MANIFEST                              This file
+CHANGES                               A change history
+Makefile.PL                           Makes the makefile
+t/test1.t                             A test of the script's correctness
+t/test2.t                             A test of the script's correctness
+t/test3.t                             A test of the script's correctness
+t/test4.t                             A test of the script's correctness
+t/test5.t                             A test of the script's correctness
+t/test1.mbx                           Input file for testing
+t/test2.dbx                           Input file
+t/test3.mbx                           Input file
+t/test4.dbx                           Input file
+t/test5.mbx                           Input file
+t/results/test1.real                  Correct output file
+t/results/test2.real                  Correct output file
+t/results/test3.real                  Correct output file
+t/results/test4.real                  Correct output file
+t/results/test5.real                  Correct output file

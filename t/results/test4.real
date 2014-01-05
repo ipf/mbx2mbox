@@ -1,0 +1,377 @@
+From root Mon May 31 19:00:01 1999 -0400
+Received: (from root@localhost)
+	by doriath.saers.com (8.8.8/8.8.8) id BAA15158
+	for root; Tue, 1 Jun 1999 01:00:01 +0200 (CEST)
+	(envelope-from root)
+Date: Tue, 1 Jun 1999 01:00:01 +0200 (CEST)
+From: Charlie Root <root>
+Message-Id: <199905312300.BAA15158@doriath.saers.com>
+Subject: Daily source update
+Status:   
+
+Parsing supfile "/etc/cvsupfile"
+Looking up address of flood.ping.uio.no
+Connecting to flood.ping.uio.no
+Connected to flood.ping.uio.no
+Server software version: REL_16_0
+Negotiatingäìôî file attribute support
+Exchanging collection information
+Establishing active-mode data connection
+Running
+Updating collection src-all/cvs
+Updating collection ports-all/cvs
+ Edit ports/audio/nas/Makefile
+  Add delta 1.10 99.05.31.06.30.46 mharo
+ Edit ports/audio/nas/pkg/PLIST
+  Add delta 1.5 99.05.31.06.29.18 mharo
+ Edit ports/devel/libffi/patches/patch-aa
+  Add delta 1.3 99.05.31.04.58.09 steve
+ Edit ports/devel/libffi/patches/patch-ad
+  Add delta 1.2 99.05.31.04.58.10 steve
+ Checkout ports/dôîñevel/swarm/patches/patch-ad
+ Edit ports/games/libshhcards/patches/patch-aa
+  Add delta 1.6 99.05.31.04.55.32 steve
+ Edit ports/games/sol/patches/patch-aa
+  Add delta 1.1 99.05.01.02.02.41 taoka
+  Add delta 1.2 99.05.31.04.51.19 steve
+ Edit ports/german/BBBike/Makefile
+  Add delta 1.4 99.05.31.05.01.37 steve
+ Edit ports/german/BBBike/pkg/PLIST
+  Add delta 1.3 99.05.31.05.01.41 steve
+ Checkout ports/graphics/hdf/patches/patch-af
+ Checkout ports/graphics/hdf/patches/patch-ag
+ Checkout ports/graphicñós/hdf/patches/patch-ah
+ Edit ports/graphics/xanim/Makefile
+  Add delta 1.19 99.05.31.09.51.37 tg
+ Edit ports/graphics/xanim/files/md5
+  Add delta 1.11 99.05.31.09.51.40 tg
+ Edit ports/graphics/xanim/patches/patch-ab
+  Add delta 1.8 99.05.31.09.51.43 tg
+ Edit ports/graphics/xanim/pkg/PLIST
+  Add delta 1.5 99.05.31.09.51.45 tg
+ Edit ports/japanese/vfghostscript/files/unix-gcc.mak.patch
+  Add delta 1.1 96.11.02.12.12.44 asami
+  Add delta 1.2 99.05.31.09.01.32 simokawa
+ Edit ports/japanese/vfghostscó$õript/patches/patch-aa
+  Add delta 1.1 96.11.02.12.12.48 asami
+  Add delta 1.2 99.05.31.09.01.33 simokawa
+ Edit ports/korean/pine/Makefile
+  Add delta 1.10 99.05.31.04.58.58 steve
+ Edit ports/korean/pine/patches/patch-aa
+  Add delta 1.4 99.05.31.04.59.02 steve
+ Edit ports/korean/pine/pkg/PLIST
+  Add delta 1.5 99.05.31.04.59.04 steve
+ Edit ports/lang/libobjects/Makefile
+  Add delta 1.6 99.05.31.04.56.23 steve
+ Edit ports/lang/ocaml/Makefile
+  Add delta 1.8 99.05.31.05.14.39 steve
+ Edit ports/lang$õ4÷/ocaml/patches/patch-aa
+  Add delta 1.4 99.05.31.05.14.44 steve
+ Checkout ports/lang/ocaml/patches/patch-ad
+ Checkout ports/lang/ocaml/patches/patch-ae
+ Checkout ports/lang/ocaml/pkg/PLIST.noprof
+ Edit ports/misc/jargon/Makefile
+  Add delta 1.4 99.05.31.05.00.31 steve
+ Edit ports/misc/mmv/pkg/PLIST
+  Add delta 1.5 99.05.31.04.53.16 steve
+ Edit ports/net/bind8/Makefile
+  Add delta 1.10 99.05.31.17.36.25 jseger
+ Edit ports/net/bind8/files/md5
+  Add delta 1.4 99.05.31.17.36.29 jseger
+ Edit ports/n4÷Dùet/sup/patches/patch-aa
+  Add delta 1.4 99.05.31.04.47.01 steve
+ Edit ports/net/sup/patches/patch-ab
+  Add delta 1.3 99.05.31.04.47.01 steve
+ Edit ports/net/sup/patches/patch-ac
+  Add delta 1.2 99.05.31.04.47.02 steve
+ Checkout ports/print/dvi2xx/patches/patch-ab
+ Edit ports/shells/scsh/Makefile
+  Add delta 1.8 99.05.31.04.52.27 steve
+ Edit ports/sysutils/cdrecord/Makefile
+  Add delta 1.15 99.05.31.06.22.06 mharo
+ Edit ports/sysutils/cdrecord/files/md5
+  Add delta 1.9 99.05.31.06.22.12 mharo
+ EDùTûdit ports/sysutils/star/Makefile
+  Add delta 1.8 99.05.31.05.08.06 steve
+ Checkout ports/sysutils/star/patches/patch-aa
+ Edit ports/textproc/docbook-xml/Makefile
+  Add delta 1.1 99.03.28.14.18.35 kuriyama
+  Add delta 1.2 99.05.30.22.11.16 kuriyama
+ Edit ports/textproc/docbook-xml/files/md5
+  Add delta 1.1 99.03.28.14.18.35 kuriyama
+  Add delta 1.2 99.05.30.22.11.22 kuriyama
+ Edit ports/textproc/htdig/Makefile
+  Add delta 1.8 99.05.31.21.11.47 billf
+ Edit ports/textproc/htdig/files/md5
+  Add deltTûdýa 1.4 99.05.31.21.11.50 billf
+ Edit ports/www/mmm/Makefile
+  Add delta 1.12 99.05.31.04.54.22 steve
+ Edit ports/x11/XFree86/files/md5
+  Add delta 1.19 99.05.30.23.02.53 asami
+ Edit ports/x11/XttXF86srv-common/files/md5
+  Add delta 1.8 99.05.30.23.02.58 asami
+ Checkout ports/x11/XttXF86srv-common/patches/patch-zb
+ Edit ports/x11/libhelp/patches/patch-ad
+  Add delta 1.1 98.04.09.08.13.33 tg
+  Add delta 1.2 99.05.31.04.57.17 steve
+ Edit ports/x11/xscreensaver/Makefile
+  Add delta 1.20 99.05.31.16.5dýtÿ7.49 jseger
+ Edit ports/x11/xscreensaver/files/md5
+  Add delta 1.12 99.05.31.16.57.51 jseger
+ Edit ports/x11/xscreensaver/pkg/PLIST
+  Add delta 1.11 99.05.31.16.57.53 jseger
+ Edit ports/x11-clocks/emiclock/Makefile
+  Add delta 1.14 99.05.31.05.04.44 steve
+ Edit ports/x11-clocks/emiclock/patches/patch-aa
+  Add delta 1.1 95.03.15.07.03.48 asami
+  Add delta 1.2 99.05.31.05.04.58 steve
+ Checkout ports/x11-clocks/emiclock/pkg/PLIST.nosound
+ Checkout ports/x11-clocks/pclock/patches/patch-aa
+ Edit porttÿs/x11-fonts/xfed/Makefile
+  Add delta 1.20 99.05.31.04.48.32 steve
+ Edit ports/x11-toolkits/xbae/patches/patch-aa
+  Add delta 1.4 99.05.31.04.49.43 steve
+ Checkout ports/x11-wm/fvwm/patches/patch-ad
+ Edit ports/x11-wm/tvtwm/patches/patch-ac
+  Add delta 1.2 99.05.31.04.50.31 steve
+ Edit ports/x11-wm/xfce/Makefile
+  Add delta 1.16 99.05.31.05.03.11 steve
+ Checkout ports/x11-wm/xfce/patches/patch-ab
+ Checkout ports/x11-wm/xfce/patches/patch-ac
+Updating collection doc-all/cvs
+ Edit doc/FAQ/hardware.sgml
+  Add delta 1.17 99.05.31.01.21.41 hoek
+  Add delta 1.18 99.05.31.01.46.28 hoek
+ Edit doc/en/handbook/contrib/chapter.sgml
+  Add delta 1.42 99.05.31.01.30.57 hoek
+ Edit doc/en/handbook/install/chapter.sgml
+  Add delta 1.15 99.05.30.21.22.16 nik
+ Edit doc/en/handbook/ports/chapter.sgml
+  Add delta 1.21 99.05.30.22.05.36 nik
+  Add delta 1.22 99.05.31.19.41.54 billf
+ Edit doc/es/FAQ/admin.sgml
+  Add delta 1.8 99.05.31.12.25.59 jesusr
+  Add delta 1.9 99.05.31.12.30.46 jesusr
+ Edit doc/es/FAQ/aUpplications.sgml
+  Add delta 1.8 99.05.31.12.26.33 jesusr
+ Edit doc/es/FAQ/commercial.sgml
+  Add delta 1.8 99.05.31.12.52.23 jesusr
+ Edit doc/es/FAQ/hardware.sgml
+  Add delta 1.8 99.05.31.13.01.05 jesusr
+ Edit doc/es/FAQ/preface.sgml
+  Add delta 1.11 99.05.31.12.46.48 jesusr
+Shutting down connection to server
+Finished successfully
+
+From root Wed Jun  2 19:00:01 1999 -0400
+Received: (from root@localhost)
+	by doriath.saers.com (8.8.8/8.8.8) id BAA23473
+	for root; Thu, 3 Jun 1999 01:00:01 +0200 (CEST)
+	(envelope-from root)
+Date: Thu, 3 Jun 1999 01:00:01 +0200 (CEST)
+From: Charlie Root <root>
+Message-Id: <199906022300.BAA23473@doriath.saers.com>
+Subject: Daily source update
+Status:   
+
+Parsing supfile "/etc/cvsupfile"
+Looking up address of flood.ping.uio.no
+Connecting to flood.ping.uio.no
+Connected to flood.ping.uio.no
+Server software version: REL_16_0
+Negotiating´Ä	 file attribute support
+Exchanging collection information
+Establishing active-mode data connection
+Running
+Updating collection src-all/cvs
+Updating collection ports-all/cvs
+ Edit ports/audio/aumix/Makefile
+  Add delta 1.1 99.05.29.04.47.12 steve
+  Add delta 1.2 99.06.02.05.26.34 mharo
+ Edit ports/audio/aumix/files/md5
+  Add delta 1.1 99.05.29.04.47.13 steve
+  Add delta 1.2 99.06.02.05.26.38 mharo
+ Checkout ports/audio/aumix/patches/patch-aa
+ Edit ports/devel/mm/Makefile
+  Add delta 1.8 99.06.0Ä	Ô2.12.32.47 rse
+ Edit ports/devel/mm/files/md5
+  Add delta 1.7 99.06.02.12.32.53 rse
+ Edit ports/devel/mm/pkg/DESCR
+  Add delta 1.1 99.03.24.14.14.13 rse
+  Add delta 1.2 99.06.02.12.32.57 rse
+ Edit ports/devel/shtool/Makefile
+  Add delta 1.8 99.06.02.12.08.01 rse
+ Edit ports/devel/shtool/files/md5
+  Add delta 1.8 99.06.02.12.08.05 rse
+ Edit ports/devel/shtool/pkg/DESCR
+  Add delta 1.4 99.06.02.12.08.08 rse
+ Edit ports/graphics/gview/Makefile
+  Add delta 1.3 99.06.02.05.09.26 mharo
+ Edit ports/gÔäraphics/gview/files/md5
+  Add delta 1.3 99.06.02.05.09.29 mharo
+ Edit ports/lang/Makefile
+  Add delta 1.134 99.06.02.10.25.07 tg
+ Checkout ports/lang/python-doc-html/Makefile
+ Checkout ports/lang/python-doc-html/files/md5
+ Checkout ports/lang/python-doc-html/pkg/COMMENT
+ Checkout ports/lang/python-doc-html/pkg/DESCR
+ Checkout ports/lang/python-doc-html/pkg/PLIST_html
+ Checkout ports/lang/python-doc-html/pkg/PLIST_pdf-a4
+ Checkout ports/lang/python-doc-html/pkg/PLIST_pdf-letter
+ Checkout ports/lanäôg/python-doc-html/pkg/PLIST_postscript-a4
+ Checkout ports/lang/python-doc-html/pkg/PLIST_postscript-letter
+ Checkout ports/lang/python-doc-pdf-a4/Makefile
+ Checkout ports/lang/python-doc-pdf-letter/Makefile
+ Checkout ports/lang/python-doc-postscript-a4/Makefile
+ Checkout ports/lang/python-doc-postscript-letter/Makefile
+ Edit ports/net/Makefile
+  Add delta 1.266 99.06.02.06.20.35 mharo
+ Edit ports/net/curl/Makefile
+  Add delta 1.7 99.06.02.07.22.49 dirk
+ Checkout ports/net/curl/patches/patch-aa
+ Côheckout ports/net/ttcp/Makefile
+ Checkout ports/net/ttcp/files/md5
+ Checkout ports/net/ttcp/pkg/COMMENT
+ Checkout ports/net/ttcp/pkg/DESCR
+ Checkout ports/net/ttcp/pkg/PLIST
+ Edit ports/security/Makefile
+  Add delta 1.57 99.06.02.08.13.02 mharo
+ Edit ports/security/bjorb/Makefile
+  Add delta 1.6 99.06.02.07.21.44 dirk
+ Edit ports/security/bjorb/patches/patch-aa
+  Add delta 1.4 99.06.02.07.21.49 dirk
+ Checkout ports/security/keyprint/Makefile
+ Checkout ports/security/keyprint/files/md5
+ Checkout ports/security/keyprint/pkg/COMMENT
+ Checkout ports/security/keyprint/pkg/DESCR
+ Checkout ports/security/keyprint/pkg/PLIST
+ Edit ports/security/openssl/Makefile
+  Add delta 1.31 99.06.02.07.30.30 dirk
+ Delete ports/security/openssl/files/Makefile.patch
+ Edit ports/security/openssl/files/md5
+  Add delta 1.14 99.06.02.07.30.37 dirk
+ Delete ports/security/openssl/patches/patch-aa
+ Edit ports/security/openssl/patches/patch-ac
+  Add delta 1.5 99.06.02.07.30.43 dirk
+ Edit ports/security/openssl/patch$es/patch-ah
+  Add delta 1.3 99.06.02.07.30.44 dirk
+ Delete ports/security/openssl/patches/patch-ai
+ Checkout ports/security/openssl/patches/patch-ak
+ Checkout ports/security/openssl/pkg/MESSAGE
+ Edit ports/security/openssl/pkg/PLIST
+  Add delta 1.14 99.06.02.07.30.52 dirk
+ Edit ports/security/slush/patches/patch-aa
+  Add delta 1.3 99.06.02.07.24.33 dirk
+ Edit ports/security/stunnel/patches/patch-aa
+  Add delta 1.4 99.06.02.07.25.16 dirk
+ Edit ports/www/apache13-modssl/Makefile
+  Add delta 1.32 9$49.06.02.07.18.31 dirk
+ Edit ports/www/apache13-modssl/files/md5
+  Add delta 1.26 99.06.02.07.18.35 dirk
+ Edit ports/www/apache13-modssl/pkg/DESCR
+  Add delta 1.7 99.06.02.07.18.40 dirk
+ Edit ports/www/apache13-modssl/pkg/PLIST
+  Add delta 1.12 99.06.02.07.18.42 dirk
+ Edit ports/www/apache13-php3/files/md5
+  Add delta 1.48 99.06.02.07.19.34 dirk
+ Edit ports/www/apache13-php3/pkg/DESCR
+  Add delta 1.8 99.06.02.07.19.39 dirk
+ Edit ports/www/apache13-php3/pkg/PLIST.modssl
+  Add delta 1.8 99.06.02.074D.19.40 dirk
+ Edit ports/www/apache13-php3/scripts/configure.php
+  Add delta 1.31 99.06.02.07.19.44 dirk
+ Edit ports/www/apache13-ssl/Makefile
+  Add delta 1.57 99.06.02.07.20.36 dirk
+ Edit ports/www/apache13-ssl/files/md5
+  Add delta 1.9 99.06.02.07.20.42 dirk
+ Edit ports/www/apache13-ssl/patches/patch-aq
+  Add delta 1.2 99.06.02.07.20.46 dirk
+ Edit ports/www/lynx-ssl/Makefile
+  Add delta 1.1 99.05.03.03.08.36 steve
+  Add delta 1.2 99.06.02.07.23.49 dirk
+Updating collection doc-all/cvs
+Shutting D0down connection to server
+Finished successfullyTd
+
+From root Thu Jun  3 19:00:01 1999 -0400
+Received: (from root@localhost)
+	by doriath.saers.com (8.8.8/8.8.8) id BAA27756
+	for root; Fri, 4 Jun 1999 01:00:01 +0200 (CEST)
+	(envelope-from root)
+Date: Fri, 4 Jun 1999 01:00:01 +0200 (CEST)
+From: Charlie Root <root>
+Message-Id: <199906032300.BAA27756@doriath.saers.com>
+Subject: Daily source update
+Status:   
+
+Parsing supfile "/etc/cvsupfile"
+Looking up address of flood.ping.uio.no
+Connecting to flood.ping.uio.no
+Connected to flood.ping.uio.no
+Server software version: REL_16_0
+Negotiatingdt  file attribute support
+Exchanging collection information
+Establishing active-mode data connection
+Running
+Updating collection src-all/cvs
+Updating collection ports-all/cvs
+ Edit ports/net/micq/Makefile
+  Add delta 1.6 99.06.03.08.31.06 ache
+ Edit ports/net/micq/files/md5
+  Add delta 1.6 99.06.03.08.31.12 ache
+ Edit ports/net/micq/patches/patch-aa
+  Add delta 1.6 99.06.03.08.31.13 ache
+ Edit ports/textproc/docproj/Makefile
+  Add delta 1.13 99.06.03.19.56.05 nik
+ Edit ports/textproc/sp/Makefilet "
+  Add delta 1.9 99.06.02.21.38.29 chuckr
+  Add delta 1.10 99.06.02.21.40.22 chuckr
+ Delete ports/textproc/sp/files/Makefile
+ Delete ports/textproc/sp/files/Makefile.inc
+ Delete ports/textproc/sp/files/doc-Makefile
+ Delete ports/textproc/sp/files/generic-Makefile
+ Delete ports/textproc/sp/files/include-Makefile
+ Delete ports/textproc/sp/files/lib-Makefile
+ Edit ports/textproc/sp/files/md5
+  Add delta 1.4 99.06.02.21.38.54 chuckr
+ Delete ports/textproc/sp/files/nsgmls-Makefile
+ Delete ports/textp"$roc/sp/files/sgmlnorm-Makefile
+ Delete ports/textproc/sp/files/spam-Makefile
+ Delete ports/textproc/sp/files/spent-Makefile
+ Checkout ports/textproc/sp/patches/patch-ab
+ Checkout ports/textproc/sp/patches/patch-ad
+ Checkout ports/textproc/sp/patches/patch-ae
+ Checkout ports/textproc/sp/patches/patch-af
+ Edit ports/textproc/sp/pkg/COMMENT
+  Add delta 1.1 97.04.26.20.02.01 jfieber
+  Add delta 1.2 99.06.02.21.39.08 chuckr
+ Edit ports/textproc/sp/pkg/DESCR
+  Add delta 1.3 99.06.02.22.01.49 hoek
+ Edi$¤&t ports/textproc/sp/pkg/PLIST
+  Add delta 1.4 99.06.02.21.39.10 chuckr
+ Delete ports/textproc/sp/scripts/configure
+ Edit ports/www/analog/patches/patch-aa
+  Add delta 1.9 99.06.03.20.37.27 mph
+ Edit ports/www/lynx-ssl/Makefile
+  Add delta 1.3 99.06.03.18.41.58 mharo
+Updating collection doc-all/cvs
+ Edit doc/en/handbook/handbook.sgml
+  Add delta 1.77 99.06.03.19.41.30 nik
+ Edit doc/en/handbook/ports/chapter.sgml
+  Add delta 1.23 99.06.03.11.07.27 hoek
+  Add delta 1.24 99.06.03.11.15.29 hoek
+ Edi¤&´(t doc/en/tutorials/docproj-primer/book.sgml
+  Add delta 1.3 99.06.03.19.44.30 nik
+ Edit doc/en/tutorials/docproj-primer/sgml-markup/chapter.sgml
+  Add delta 1.2 99.06.03.19.48.57 nik
+ Edit doc/en/tutorials/docproj-primer/sgml-primer/chapter.sgml
+  Add delta 1.3 99.06.03.19.51.26 nik
+ Edit doc/ja/handbook/handbook.sgml
+  Add delta 1.44 99.06.03.19.46.20 nik
+ Edit doc/share/mk/docproj.docbook.mk
+  Add delta 1.5 99.06.03.19.39.29 nik
+ Edit doc/share/sgml/catalog
+  Add delta 1.4 99.06.03.19.35.48 nik Edit doc/share/sgml/freebsd.dtd
+  Add delta 1.2 99.06.03.19.37.49 nik
+Shutting down connection to server
+Finished successfullyT
